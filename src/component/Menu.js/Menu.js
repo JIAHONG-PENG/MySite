@@ -1,6 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import bootstrap from "bootstrap";
 
 function Menu(props) {
   const current = props.current;
