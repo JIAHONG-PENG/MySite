@@ -9,7 +9,9 @@ function SideBarRight(props) {
         href="https://www.linkedin.com/in/chris-peng-88b76a214"
         className="linkin-img"
         rel="noreferrer"
-      ></a>
+      >
+        <div></div>
+      </a>
       <div className="git-img"></div>
       <div className="bar"></div>
     </div>
