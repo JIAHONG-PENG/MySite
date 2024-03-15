@@ -1,6 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import bootstrap from "bootstrap";
 import Menu from "../component/Menu.js/Menu";
 import SideBarRight from "../component/SideBarRight";
 import ExperienceElement from "../component/ExperienceElement";

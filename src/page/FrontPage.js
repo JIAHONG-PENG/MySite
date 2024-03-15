@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import bootstrap from "bootstrap";
+
 import Resume from "../assets//Resume.pdf";
 
 function FrontPage(props) {

@@ -1,6 +1,4 @@
-import logo from "./logo.svg";
 import React from "react";
-import { ReactDOM } from "react";
 
 import "./App.css";
 import FrontPage from "./page/FrontPage";
