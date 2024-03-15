@@ -1,38 +1,403 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* :root {
+  --percent: ;
+} */
+
+/* html, body, #root,{
+  width: 100%;
+  height: 100%;
+} */
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.background {
+  background-color: #1E1E1E;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  
+  
+  & .box {
+    & .text {
+      margin: auto;
+      color: white;
+      font-size: 6vw;
+      font-weight: 700;
+    }
+
+    & .CV {
+      margin: auto;
+      width: fit-content;
+      font-size: 1.5vw;
+      color: white;
+      padding: 0.5vw 1.5vw;
+      font-weight: 500;
+      border-radius: 1.5vw;
+      margin-top: 0.4vh;
+      background-color: #F97316;
+      cursor: pointer;
+      
+      display: block;
+      text-decoration: none;
+    }
+  }
+
+  & .aboutme {
+    color: white;
+    display: flex;
+    font-size: 1.5vw;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & .image {
+      margin-top: 10px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../public/arrow.png);
+      background-size: cover;
+    }
+  }
+}
+
+.AboutMe {
+  width: 100vw;
+  height: 100vh;
+
+  & .box{
+    width: 85vw;
+    height: 85vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .section-name {
+      font-weight: 800;
+      font-size: 2vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .main-content {
+      display: flex;
+      align-items: center;
+      
+      & > div:first-of-type {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+        width: 50vw;
+
+        & .title {
+          font-family: 'Poppins';
+          font-size: 3vw;
+          font-weight: 500;
+          /* border: solid 1px grey; */
+          /* box-shadow: 2px 2px; */
+          /* padding: 20px; */
+          margin-bottom: 20px;
+          font-family: "Poppins";
+          
+          /* &:hover {
+            box-shadow: 5px 5px;
+          } */
+        }
+        & .discription {
+          color: #4a5d84;
+          padding: 20px;
+          /* margin-bottom: 20px; */
+          font-weight: 700;
+          font-size: 20px;
+          font-family: 'Red Hat Text';
+          border: solid 1px black;
+          box-shadow: 2px 2px;
+
+          &:hover {
+          box-shadow: 5px 5px;
+          }
+        }
+        & .photo {}
+      }
+    }
+  }
+}
+
+.menu {
+  width: fit-content;
+  margin: auto;
+  background-color: black;
+  padding: 0.8vw;
+  border-radius: 30px;
   color: white;
-}
+  display: flex;
+  font-weight: 500;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  & div {
+    margin: 0 1vw;
+    cursor: pointer;
   }
 }
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10vw;
+
+  & .bar {
+    width: 4px;
+    height: 150px;
+    background-color: black;
+  }
+
+  & .linkin-img,
+  & .git-img {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin: 10px 0;
+  }
+
+  & .linkin-img {
+  background-image: url(../public/linkedin.png);
+  /* cursor: pointer; */
+
+    /* & a {
+      width: 100%;
+      height: 100%;
+    } */
+  }
+
+  & .git-img {
+    background-image: url(../public/github.png);
+  }
+}
+
+.Experience {
+  width: 100vw;
+  height: 100vh;
+
+  & .box{
+    width: 85vw;
+    height: 85vh;
+    margin: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+    & .section-name {
+      font-weight: 800;
+      font-size: 2vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      
+      & .side-bar {
+        padding-left: 2vw;
+      }
+
+      & .exp-container {
+        display: flex;
+
+        & .side-bar-left-container {
+          width: 50px;
+          display: flex;
+          justify-content: center;
+  
+          & .side-bar-left {
+            width: 10px;
+            /* height: 85vh; */
+            background-color: #E5E7EB;
+            border-radius: 5px;
+          }
+        }
+
+        & div:nth-of-type(2) {
+          & .exp {
+            width: auto;
+            max-width: 750px;
+            min-height: 160px;
+            display: flex;
+            justify-content: space-between;
+            font-family: "Red Hat Text";
+            margin: 20px 50px;
+            border: solid 1px grey;
+            box-shadow: 2px 2px;
+            padding: 10px;
+            /* margin: 0 50px; */
+
+            &:hover {
+              box-shadow: 5px 5px;
+            }
+
+            & .time {
+              width: fit-content;
+              font-weight: bold;
+              color: #6B7280;
+              font-size: 16px;
+              /* margin-top: 5px; */
+              margin: 5px 20px 0 10px;
+              position: relative;
+            }
+
+            & .description {
+              
+              & .title {
+                font-size: 20px;
+                font-weight: bold;
+              }
+
+              & .location {
+                font-weight: 500;
+              }
+              
+              & .text {
+                width: auto;
+                max-width: 500px;
+                min-width: 300px;
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #9CA3AF;
+                /* padding: 10px; */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.Project {
+  width: 100vw;
+  height: 100vh;
+
+  & .box{
+    width: 85vw;
+    height: 85vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .section-name {
+      font-weight: 800;
+      font-size: 2vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & .main-content {
+      display: flex;
+      align-items: center;
+      
+      & .project-container {
+        width: 500px;
+        height: 500px;
+        /* border: solid 1px black; */
+        /* display: flex; */
+
+        & .project {
+          /* width: 80%;
+          height: 30%; */
+          width: fit-content;
+          border: solid 1px black;
+          box-shadow: 2px 2px;
+          max-width: 80%;
+          margin-bottom: 20px;
+
+          &:nth-child(2) {
+            float: right;
+          }
+
+          &:hover {
+          box-shadow: 5px 5px;
+          }
+
+          & .project-content {
+            padding: 20px;
+
+            & .title {
+              font-size: 1.5vw;
+              font-weight: 600;
+              font-family: "Poppins";
+              margin-bottom: 10px;
+            }
+
+            & .text {
+              font-size: 1.2vw;
+            }
+
+            & a {
+              margin-top: 10px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Contact {
+  width: 100vw;
+  height: 100vh;
+
+  & .main-content {
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &  .contact-email,
+    & .contact-phone {
+      text-align: center;
+      padding: 5px;
+      font-weight: 600;
+      font-size: 2vw;
+    }
+  }
+}
+
+.notDisplay {
+  display: none;
+}
+
+.orange {
+  color: #FFA940;
+  width: fit-content;
+  margin-left: 10px;
+  }
