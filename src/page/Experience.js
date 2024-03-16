@@ -11,11 +11,6 @@ function Experience(props) {
       location: "Sydney",
       text: "During the internship, I was responsible for maintaining the frontend of platforms using Vue and interacting with database using SQL. I also have experience using AWS, including database, S3 and serverless API.",
     },
-    {
-      time: "JUNE - SEP 2023",
-      title: "Website Developer",
-      text: "bruhb ruhb ruhbruhbruhb ruhbruh bruhbruhbr uhbruh bruhbr uhbruh ruhbruhbru bruhb uhbruh",
-    },
   ];
 
   const exps_elements = [];
