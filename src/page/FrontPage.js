@@ -4,7 +4,7 @@ import Resume from "../assets//Resume.pdf";
 
 function FrontPage(props) {
   return (
-    <div className={`background ${props.hidden ? "notDisplay" : ""}`}>
+    <div className={`background ${props.current !== 0 ? "notDisplay" : ""}`}>
       <div className="box">
         <p className="text">
           Hi, I'm<span className="orange">Chris</span>

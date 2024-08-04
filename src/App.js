@@ -6,6 +6,7 @@ import AboutMe from "./page/AboutMe";
 import Experience from "./page/Experience";
 import Project from "./page/Project";
 import Contact from "./page/Contact";
+import Menu from "./component/Menu.js/Menu";
 
 function App() {
   const [hidden, setHidden] = React.useState(true);
@@ -27,36 +28,13 @@ function App() {
 
   return (
     <div className="App" ref={appRef}>
-      <FrontPage
-        appRef={appRef}
-        current={current}
-        setCurr={setCurrent}
-        setHidden={setHidden}
-      />
-      <AboutMe
-        appRef={appRef}
-        hidden={hidden}
-        current={current}
-        setCurrent={setCurrent}
-      />
-      <Experience
-        appRef={appRef}
-        hidden={hidden}
-        current={current}
-        setCurrent={setCurrent}
-      />
-      <Project
-        appRef={appRef}
-        current={current}
-        hidden={hidden}
-        setCurrent={setCurrent}
-      />
-      <Contact
-        appRef={appRef}
-        current={current}
-        hidden={hidden}
-        setCurrent={setCurrent}
-      />
+      <Menu appRef={appRef} current={current} setCurrent={setCurrent} />
+
+      <FrontPage appRef={appRef} current={current} setCurr={setCurrent} />
+      <AboutMe appRef={appRef} hidden={hidden} current={current} />
+      <Experience appRef={appRef} hidden={hidden} current={current} />
+      <Project appRef={appRef} current={current} hidden={hidden} />
+      <Contact appRef={appRef} current={current} hidden={hidden} />
     </div>
   );
 }

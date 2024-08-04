@@ -30,12 +30,12 @@ function Experience(props) {
   // const expRef = React.useRef();
 
   return (
-    <div className={`Experience ${props.hidden ? "notDisplay" : ""}`}>
-      <Menu
+    <div className={`Experience ${props.current === 2 ? "display" : ""}`}>
+      {/* <Menu
         current={props.current}
         setCurrent={props.setCurrent}
         appRef={props.appRef}
-      />
+      /> */}
 
       <div className="box container">
         <div className="row">

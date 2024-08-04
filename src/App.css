@@ -16,7 +16,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden; 
-
 }
 
 .background {
@@ -34,14 +33,14 @@ body {
     & .text {
       margin: auto;
       color: white;
-      font-size: 6vw;
+      font-size: 90px;
       font-weight: 700;
     }
 
     & .CV {
       margin: auto;
       width: fit-content;
-      font-size: 1.5vw;
+      font-size: 23px;
       color: white;
       padding: 0.5vw 1.5vw;
       font-weight: 500;
@@ -58,7 +57,7 @@ body {
   & .aboutme {
     color: white;
     display: flex;
-    font-size: 1.5vw;
+    font-size: 23px;
     font-weight: 500;
     position: absolute;
     bottom: 20px;
@@ -83,6 +82,8 @@ body {
   width: 100vw;
   height: 100vh;
 
+  display: none;
+
   & .box{
     width: 85vw;
     height: 85vh;
@@ -93,7 +94,7 @@ body {
 
     & .section-name {
       font-weight: 800;
-      font-size: 2vw;
+      font-size: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -111,7 +112,7 @@ body {
 
         & .title {
           font-family: 'Poppins';
-          font-size: 3vw;
+          font-size: 45px;
           font-weight: 500;
           /* border: solid 1px grey; */
           /* box-shadow: 2px 2px; */
@@ -128,7 +129,7 @@ body {
           padding: 20px;
           /* margin-bottom: 20px; */
           font-weight: 700;
-          font-size: 20px;
+          font-size: 16px;
           font-family: 'Red Hat Text';
           border: solid 1px black;
           box-shadow: 2px 2px;
@@ -144,8 +145,10 @@ body {
 }
 
 .menu {
+  position: fixed;
   width: fit-content;
-  margin: auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
   background-color: black;
   padding: 0.8vw;
   border-radius: 30px;
@@ -198,6 +201,8 @@ body {
   width: 100vw;
   height: 100vh;
 
+  display: none;
+
   & .box{
     width: 85vw;
     height: 85vh;
@@ -208,7 +213,7 @@ body {
 
     & .section-name {
       font-weight: 800;
-      font-size: 2vw;
+      font-size: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -301,6 +306,8 @@ body {
   width: 100vw;
   height: 100vh;
 
+  display: none;
+
   & .box{
     width: 85vw;
     height: 85vh;
@@ -311,7 +318,7 @@ body {
 
     & .section-name {
       font-weight: 800;
-      font-size: 2vw;
+      font-size: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -348,14 +355,14 @@ body {
             padding: 20px;
 
             & .title {
-              font-size: 1.5vw;
+              font-size: 20px;
               font-weight: 600;
               font-family: "Poppins";
               margin-bottom: 10px;
             }
 
             & .text {
-              font-size: 1.2vw;
+              font-size: 16px;
             }
 
             & a {
@@ -373,6 +380,8 @@ body {
   width: 100vw;
   height: 100vh;
 
+  display: none;
+
   & .main-content {
     width: 85%;
     height: 85%;
@@ -386,13 +395,9 @@ body {
     & .contact-phone {
       text-align: center;
       padding: 5px;
-      font-size: 2vw;
+      font-size: 30px;
     }
   }
-}
-
-.notDisplay {
-  display: none;
 }
 
 .orange {
@@ -400,3 +405,11 @@ body {
   width: fit-content;
   margin-left: 10px;
   }
+
+.notDisplay {
+  display: none;
+}
+
+.display {
+  display: flex;
+}

@@ -4,8 +4,8 @@ import SideBarRight from "../component/SideBarRight";
 
 function Project({ appRef, hidden, current, setCurrent }) {
   return (
-    <div className={`Project ${hidden ? "notDisplay" : ""}`}>
-      <Menu appRef={appRef} current={current} setCurrent={setCurrent} />
+    <div className={`Project ${current === 3 ? "display" : ""}`}>
+      {/* <Menu appRef={appRef} current={current} setCurrent={setCurrent} /> */}
 
       <div className="box container">
         <div className="row">

@@ -4,12 +4,12 @@ import SideBarRight from "../component/SideBarRight";
 
 function AboutMe(props) {
   return (
-    <div className={`AboutMe ${props.hidden ? "notDisplay" : ""}`}>
-      <Menu
+    <div className={`AboutMe ${props.current === 1 ? "display" : ""}`}>
+      {/* <Menu
         current={props.current}
         setCurrent={props.setCurrent}
         appRef={props.appRef}
-      />
+      /> */}
 
       <div className="box container">
         <div className="row">
@@ -20,11 +20,11 @@ function AboutMe(props) {
                 A big fan of <b>fitness</b> and <b>soccer</b>!
               </div>
               <div className="discription">
-                <u>Education:</u> <br />
+                <u style={{ fontSize: "20px" }}>Education:</u> <br />
                 Bachelor of Computing (usyd) <br />
-                Master of IT (usyd, in progress) <br />
+                Master of IT (usyd) <br />
                 <br />
-                <u>Skill:</u> <br />
+                <u style={{ fontSize: "20px" }}>Skill:</u> <br />
                 Java, Javascript, Python, React, Vue, Node, AWS
               </div>
               <div className="photo"></div>
