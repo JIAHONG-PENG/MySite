@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "../component/Menu.js/Menu";
+// import Menu from "../component/Menu.js/Menu";
 
 function Contact({ appRef, hidden, setCurrent, current }) {
   return (
