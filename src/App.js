@@ -105,22 +105,22 @@ function App() {
         <p>&copy; 2025 Jia Hong Png. All Rights Reserved.</p>
       </footer> */}
 
-      <div class="container-sm overpass-regular">
-        <div class="text-center">
+      <div className="container-sm overpass-regular">
+        <div className="text-center">
           <h2>Jiahong Peng (Chris)</h2>
           <p>Software Developer | Tech Enthusiast</p>
           <br />
         </div>
-        <div class="row">
-          <div class="col-md-1"></div>
+        <div className="row">
+          <div className="col-md-1"></div>
 
-          <div class="col-md-4 text-center">
-            <div class="black-box mx-auto"></div>
+          <div className="col-md-4 text-center">
+            <div className="black-box mx-auto"></div>
             <br />
             {/* <h4>Contact Chris</h4>
             <p></p> */}
           </div>
-          <div class="col-md-6">
+          <div className="col-md-6">
             <section id="bio">
               <h4>About Me</h4>
               <p>
@@ -162,7 +162,7 @@ function App() {
                 <br />
 
                 <li>
-                  <a className="disabled-link">
+                  <a className="disabled-link" href>
                     Submitter, Score board (Samsung Flip event) <br />
                   </a>
                   - Submitter receives input from user and sends to database on
@@ -208,7 +208,7 @@ function App() {
             </section>
           </div>
 
-          <div class="col-md-1"></div>
+          <div className="col-md-1"></div>
         </div>
       </div>
     </div>
