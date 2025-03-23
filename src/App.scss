@@ -1,0 +1,353 @@
+@import "bootstrap/scss/bootstrap";
+
+.App {
+  background-color: #2d2d2d;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  color: white;
+  padding-top: 2%;
+  height: 100vh;
+
+  .menu-item {
+    .line {
+      width: 100%;          /* Adjust the width as needed */
+      height: 2px;         /* Line thickness */
+      background-color: white;
+      transform: scaleX(0); /* Initially hidden (scaleX(0) shrinks the line horizontally) */
+      transform-origin: left; /* Start the transformation from the left */
+      transition: transform 0.3s ease; /* Smooth transition */
+    }
+
+    &:hover .line{
+      transform: scaleX(1); /* Fully reveal the line on hover */
+    }
+  }
+
+  .picture {
+    position: absolute;
+    align-self: center;
+
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+  
+    div {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      
+      div {
+        width: 5vw;
+        min-width: 30px;
+        // height: 80px;
+        margin: 2px;
+        transition: all 0.3s ease-in-out;
+        
+        &.P {
+          width: 7vw;
+          min-width: 42px;
+          // transition: all 0.3 ease;
+          // top: 100px;
+          // height: 100px;
+        }
+        
+        &:hover {
+          transform: scale(1.5);
+        }
+  
+        &.O:hover {
+          transform: rotate(45deg);
+        }
+  
+        &.I:hover {
+          transform: scaleY(1.5);
+        }
+  
+        &.T:hover {
+          transform: scaleX(1.5);
+        }
+      }
+  
+      
+    }
+  }
+}
+
+.skill {
+  background-color: white;
+  max-width: 100% !important;
+
+  opacity: 0; /* Hide initially */
+  transform: translateY(60px); /* Move down initially */
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+
+  .heading {
+    padding-top: 2%;
+    // padding-left: 2%;
+  }
+
+  .row div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 65%;
+      height: 65%;
+      
+      path, rect, circle {
+        transition: fill 0.3s ease-in-out;
+      }
+
+      &.html5:hover path {
+        fill: #E44D26;
+      }
+
+      &.js:hover rect {
+        fill: #f5de19;
+      }
+
+      &.css:hover path {
+        fill: #1572B6;
+      }
+
+      &.git:hover path {
+        fill: #F34F29;
+      }
+
+      &.vue:hover path:nth-child(1) {
+        fill: #41B883;
+      }
+
+      &.react:hover path, 
+      &.react:hover circle {
+        fill: #61DAFB;
+      }
+
+      &.sass:hover path {
+        fill: #CB6699;
+      }
+
+      &.bootstrap:hover path {
+        fill: #5B4282;
+      }
+    }
+
+  }
+}
+
+// .picture {
+//   width: 50%;
+//   min-height: 650px;
+//   background-image: url("../public/pic1.jpg");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   transition: transform 1s ease; /* Smooth rotation */
+//   transform: rotate(0deg);
+
+
+//   &:hover {
+//     transform: rotate(20deg); /* Rotate 360 degrees on hover */
+//   }
+
+//   // .photo {
+//   //   width: 100%;
+//   //   height: 150px;
+//   //   background-image: url("../public/mypic.png");
+//   //   background-size: contain;
+//   //   background-repeat: no-repeat;
+//   //   background-position: center;
+//   // }
+// }
+
+
+.disabled-link {
+  pointer-events: none;
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+.dropbox {
+  position: relative;
+  border: 1px solid black;
+
+  /* display: flex;
+  flex-direction: column; */
+  border-radius: 10px;
+  max-height: 50px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+
+.dropbox .title {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.clicked {
+  /* height: 200px; */
+  max-height: 500px;
+}
+
+.close-button {
+  position: absolute;
+  display: inline-block;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.about {
+  color: white;
+  
+  opacity: 0; /* Hide initially */
+  transform: translateY(60px); /* Move down initially */
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+
+  .form {
+
+    form {
+      input {
+        width: 100%;
+        height: 25px;
+        margin-bottom: 2%;
+      }
+
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+
+  .social {
+    ul {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+      flex-wrap: wrap;
+
+      li {
+        margin-bottom: 10%;
+      }
+
+      svg {
+        width: 38px;
+        height: 38px;
+        margin-right: 20px;
+        opacity: 1;
+
+        background-color: rgba(0, 0, 0, 0.5); /* Black mask with 50% opacity */
+        transition: all 0.3s ease;
+
+        path {
+          fill: white;
+        }
+
+        rect {
+          fill: white;
+        }
+
+        &:hover {
+          opacity: 0.5;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  margin-left: 10%;
+}
+
+.project {
+  color: white;
+
+  opacity: 0; /* Hide initially */
+  transform: translateY(60px); /* Move down initially */
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+  
+  .heading {
+    padding-top: 2%;
+    // padding-left: 2%;
+  }
+
+  ul {
+    position: relative;
+    list-style: none;
+    padding-left: 0;    
+
+    .project-item {
+      width: 300px;
+      padding: 3%;
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      transition: all 0.4s ease-in-out;
+    }
+    
+    .project-item:nth-child(1)  {
+      z-index: 3; 
+
+    }
+    
+    .project-item:nth-child(2)  {
+      transform: translateX(-50px);
+      z-index: 2; 
+      
+    }
+
+    .project-item:nth-child(3)  {
+      transform: translateX(-100px);
+      z-index: 1; 
+      
+    }
+
+  }
+
+}
+
+.flex-display {
+  display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
