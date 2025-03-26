@@ -8,6 +8,7 @@ function App() {
     const skill_section = document.querySelector(".skill");
     const about_section = document.querySelector(".about");
     const project_section = document.querySelector(".project");
+    // const footer_img = document.querySelector(".footer-img");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,6 +25,39 @@ function App() {
     observer.observe(skill_section);
     observer.observe(about_section);
     observer.observe(project_section);
+
+    const handleScroll = () => {
+      const bottomReached =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 1;
+
+      if (bottomReached) {
+        setTimeout(() => {
+          about_section.classList.add("move-up");
+        }, 500);
+      }
+    };
+
+    // if window is currently at bottom
+    if (
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 1
+    ) {
+      setTimeout(() => {
+        about_section.classList.add("move-up");
+      }, 500);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    // footer_img.addEventListener("transitionend", () => {
+    //   footer_img.style.position = "absolute";
+    // });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   // function P_onMouseEnter() {
@@ -843,114 +877,120 @@ function App() {
 
       <br />
 
-      <div className="container-sm about">
-        <div className="row">
-          <div className="col-md-5 description">
-            <h3>About Me</h3>
-            <p>
-              I am passionate about building software solutions and exploring
-              emerging technologies. I'm also a big fan of fitness 🏋️‍♂️.
-            </p>
+      <div className="container-xl about">
+        <div className="container-sm">
+          <div className="row">
+            <div className="col-md-5 description">
+              <h3>About Me</h3>
+              <p>
+                I am passionate about building software solutions and exploring
+                emerging technologies. I'm also a big fan of fitness 🏋️‍♂️.
+              </p>
 
-            <div>
-              <u style={{ fontSize: "20px" }}>Education:</u> <br />
-              Bachelor of Computing, majoring in computer science (usyd) <br />
-              Master of IT (usyd) <br />
+              <div>
+                <u style={{ fontSize: "20px" }}>Education:</u> <br />
+                Bachelor of Computing, majoring in computer science (usyd){" "}
+                <br />
+                Master of IT (usyd) <br />
+              </div>
+
+              <br />
             </div>
 
-            <br />
-          </div>
+            <div className="col-md-4 form ">
+              {/* <div className="photo mx-auto"></div> */}
+              <h3>Hey!</h3>
+              <form>
+                <label htmlFor="name">Name:</label> <br />
+                <input type="text" id="name" name="name" required />
+                <br />
+                <label htmlFor="email">Email:</label>
+                <br />
+                <input type="email" id="email" name="email" required />
+                <br />
+                <label htmlFor="message">Message:</label>
+                <br />
+                <textarea id="message" name="message" required></textarea>{" "}
+                <br />
+                <button type="submit">Send</button>
+              </form>
+              <br />
+            </div>
 
-          <div className="col-md-4 form ">
-            {/* <div className="photo mx-auto"></div> */}
-            <h3>Hey!</h3>
-            <form>
-              <label htmlFor="name">Name:</label> <br />
-              <input type="text" id="name" name="name" required />
-              <br />
-              <label htmlFor="email">Email:</label>
-              <br />
-              <input type="email" id="email" name="email" required />
-              <br />
-              <label htmlFor="message">Message:</label>
-              <br />
-              <textarea id="message" name="message" required></textarea> <br />
-              <button type="submit">Submit</button>
-            </form>
-            <br />
-          </div>
-
-          <div className="col-md-3 social">
-            <h3>Social</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/JIAHONG-PENG"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <svg
-                    className="main-about__social-icon-svg"
-                    viewBox="0 0 1024 1024"
-                    xmlns="http://www.w3.org/2000/svg"
+            <div className="col-md-3 social">
+              <h3>Social</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/JIAHONG-PENG"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <path
-                      className="main-about__social-icon"
-                      d="M512 0C229.25 0 0 229.25 0 512c0 226.25 146.688 418.125 350.156 485.812 25.594 4.688 34.938-11.125 34.938-24.625 0-12.188-0.469-52.562-0.719-95.312C242 908.812 211.906 817.5 211.906 817.5c-23.312-59.125-56.844-74.875-56.844-74.875-46.531-31.75 3.53-31.125 3.53-31.125 51.406 3.562 78.47 52.75 78.47 52.75 45.688 78.25 119.875 55.625 149 42.5 4.654-33 17.904-55.625 32.5-68.375C304.906 725.438 185.344 681.5 185.344 485.312c0-55.938 19.969-101.562 52.656-137.406-5.219-13-22.844-65.094 5.062-135.562 0 0 42.938-13.75 140.812 52.5 40.812-11.406 84.594-17.031 128.125-17.219 43.5 0.188 87.312 5.875 128.188 17.281 97.688-66.312 140.688-52.5 140.688-52.5 28 70.531 10.375 122.562 5.125 135.5 32.812 35.844 52.625 81.469 52.625 137.406 0 196.688-119.75 240-233.812 252.688 18.438 15.875 34.75 47 34.75 94.75 0 68.438-0.688 123.625-0.688 140.5 0 13.625 9.312 29.562 35.25 24.562C877.438 930 1024 738.125 1024 512 1024 229.25 794.75 0 512 0z"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/chris-peng-88b76a214"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <svg
-                    version="1.1"
-                    viewBox="0 0 512 512"
-                    xmlns="http://www.w3.org/2000/svg"
+                    <svg
+                      className="main-about__social-icon-svg"
+                      viewBox="0 0 1024 1024"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        className="main-about__social-icon"
+                        d="M512 0C229.25 0 0 229.25 0 512c0 226.25 146.688 418.125 350.156 485.812 25.594 4.688 34.938-11.125 34.938-24.625 0-12.188-0.469-52.562-0.719-95.312C242 908.812 211.906 817.5 211.906 817.5c-23.312-59.125-56.844-74.875-56.844-74.875-46.531-31.75 3.53-31.125 3.53-31.125 51.406 3.562 78.47 52.75 78.47 52.75 45.688 78.25 119.875 55.625 149 42.5 4.654-33 17.904-55.625 32.5-68.375C304.906 725.438 185.344 681.5 185.344 485.312c0-55.938 19.969-101.562 52.656-137.406-5.219-13-22.844-65.094 5.062-135.562 0 0 42.938-13.75 140.812 52.5 40.812-11.406 84.594-17.031 128.125-17.219 43.5 0.188 87.312 5.875 128.188 17.281 97.688-66.312 140.688-52.5 140.688-52.5 28 70.531 10.375 122.562 5.125 135.5 32.812 35.844 52.625 81.469 52.625 137.406 0 196.688-119.75 240-233.812 252.688 18.438 15.875 34.75 47 34.75 94.75 0 68.438-0.688 123.625-0.688 140.5 0 13.625 9.312 29.562 35.25 24.562C877.438 930 1024 738.125 1024 512 1024 229.25 794.75 0 512 0z"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/chris-peng-88b76a214"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <g>
-                      <rect
-                        height="512"
-                        rx="64"
-                        ry="64"
-                        fill="#151515"
-                        width="512"
-                        x="0"
-                        y="5.6843419e-014"
-                      ></rect>
-                      <g transform="matrix(1.5537946,0,0,1.5537946,-140.87332,-132.64552)">
+                    <svg
+                      version="1.1"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
                         <rect
-                          height="166.021"
-                          style={{ fill: "#151515" }}
-                          width="55.194"
-                          x="129.957"
-                          y="200.35699"
+                          height="512"
+                          rx="64"
+                          ry="64"
+                          fill="#151515"
+                          width="512"
+                          x="0"
+                          y="5.6843419e-014"
                         ></rect>
-                        <path
-                          d="m 157.927,120.303 c -18.884,0 -31.222,12.415 -31.222,28.687 0,15.93 11.963,28.687 30.491,28.687 h 0.357 c 19.245,0 31.224,-12.757 31.224,-28.687 -0.357,-16.272 -11.978,-28.687 -30.85,-28.687 z"
-                          id="path13-0"
-                          style={{ fill: "#151515" }}
-                        ></path>
-                        <path
-                          d="m 320.604,196.453 c -29.277,0 -42.391,16.101 -49.734,27.41 v -23.506 h -55.18 c 0.732,15.573 0,166.021 0,166.021 h 55.179 V 273.66 c 0,-4.963 0.357,-9.924 1.82,-13.471 3.982,-9.911 13.068,-20.178 28.313,-20.178 19.959,0 27.955,15.23 27.955,37.539 v 88.828 h 55.182 v -95.206 c 0,-50.996 -27.227,-74.719 -63.535,-74.719 z"
-                          id="path15"
-                          style={{ fill: "#151515" }}
-                        ></path>
+                        <g transform="matrix(1.5537946,0,0,1.5537946,-140.87332,-132.64552)">
+                          <rect
+                            height="166.021"
+                            style={{ fill: "#151515" }}
+                            width="55.194"
+                            x="129.957"
+                            y="200.35699"
+                          ></rect>
+                          <path
+                            d="m 157.927,120.303 c -18.884,0 -31.222,12.415 -31.222,28.687 0,15.93 11.963,28.687 30.491,28.687 h 0.357 c 19.245,0 31.224,-12.757 31.224,-28.687 -0.357,-16.272 -11.978,-28.687 -30.85,-28.687 z"
+                            id="path13-0"
+                            style={{ fill: "#151515" }}
+                          ></path>
+                          <path
+                            d="m 320.604,196.453 c -29.277,0 -42.391,16.101 -49.734,27.41 v -23.506 h -55.18 c 0.732,15.573 0,166.021 0,166.021 h 55.179 V 273.66 c 0,-4.963 0.357,-9.924 1.82,-13.471 3.982,-9.911 13.068,-20.178 28.313,-20.178 19.959,0 27.955,15.23 27.955,37.539 v 88.828 h 55.182 v -95.206 c 0,-50.996 -27.227,-74.719 -63.535,-74.719 z"
+                            id="path15"
+                            style={{ fill: "#151515" }}
+                          ></path>
+                        </g>
                       </g>
-                    </g>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                pjh646634309@gmail.com <br /> 424 986 648
-              </li>
-            </ul>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  pjh646634309@gmail.com <br /> 424 986 648
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        {/* <img className="footer-img" src="/footer_pic.png"></img> */}
+        {/* <div className="footer-img"></div> */}
       </div>
     </div>
   );
