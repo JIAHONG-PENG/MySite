@@ -997,7 +997,7 @@ function App() {
         </div>
         {/* <div className="footer-img"></div> */}
       </div>
-      <img className="footer-img" src="/footer_pic.png"></img>
+      <img className="footer-img" src="/footer_pic.png" alt="footer-img"></img>
     </div>
   );
 }
