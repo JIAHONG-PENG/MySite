@@ -8,7 +8,7 @@ function App() {
     const skill_section = document.querySelector(".skill");
     const about_section = document.querySelector(".about");
     const project_section = document.querySelector(".project");
-    // const footer_img = document.querySelector(".footer-img");
+    const footer_img = document.querySelector(".footer-img");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,7 +33,7 @@ function App() {
 
       if (bottomReached) {
         setTimeout(() => {
-          about_section.classList.add("move-up");
+          footer_img.classList.add("move-up");
         }, 500);
       }
     };
@@ -44,9 +44,15 @@ function App() {
       document.documentElement.scrollHeight - 1
     ) {
       setTimeout(() => {
-        about_section.classList.add("move-up");
+        footer_img.classList.add("move-up");
       }, 500);
     }
+
+    // footer_img.addEventListener("transitionend", () => {
+    //   setTimeout(() => {
+    //     footer_img.style.position = "absolute";
+    //   }, 10);
+    // });
 
     window.addEventListener("scroll", handleScroll);
 
@@ -989,9 +995,9 @@ function App() {
             </div>
           </div>
         </div>
-        {/* <img className="footer-img" src="/footer_pic.png"></img> */}
         {/* <div className="footer-img"></div> */}
       </div>
+      <img className="footer-img" src="/footer_pic.png"></img>
     </div>
   );
 }
