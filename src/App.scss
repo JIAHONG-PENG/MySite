@@ -217,17 +217,13 @@
 
 .about {
   position: relative;
-  // max-width: 100% !important;
   color: white;
-  padding-bottom: 300px;
+  margin-bottom: 300px;
   z-index: 2;
 
-  // background-image: url("../public/footer_pic.png");
-  // background-size: 0;
-  // background-repeat: no-repeat;
-  // background-position-y: bottom;
-  // clip-path: inset(100% 0 0 0); /* Initially hidden */
-  // transition: clip-path 2s ease-in-out;
+  opacity: 0; /* Hide initially */
+  transform: translateY(60px); /* Move down initially */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 
   .row {
     div {padding-left: 0;}
