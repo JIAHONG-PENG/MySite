@@ -1,4 +1,4 @@
-## This is my portfolio
+## This is my portfolio (React)
 #### https://chrispeng.netlify.app/ or `npm run dev`
 
 ### Overview
