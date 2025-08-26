@@ -1,5 +1,5 @@
 ## This is my portfolio (React)
-#### https://chrispeng.netlify.app/ or `npm run dev`
+#### https://chrispeng.netlify.app/ or `npm install & npm start`
 
 ### Overview
 #### Index
