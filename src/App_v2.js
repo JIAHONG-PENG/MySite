@@ -86,7 +86,7 @@ function App() {
     const expreience =[
         {
             name: "Aquion Pty Ltd",
-            description: "- Developed and maintained the company's full-stack information management system, streamlining the collection and distribution of business data. <br /> - Tested and enhanced system performance, including optimizing page load time and refactoring code for clarity and maintainability. <br /> - Integrated AI-powered features to strengthen business insights, such as automated vendor summaries and loss reason analysis for failed deals.",
+            description: "- <b>Developed and maintained the company's full-stack information management system</b>, streamlining the collection and distribution of business data. <br /> - <b>Tested and enhanced system performance</b>, including optimizing page load time and refactoring code for clarity and maintainability. <br /> - <b>Integrated AI-powered features to strengthen business insights</b>, such as automated vendor summaries and loss reason analysis for failed deals.",
             link: "https://www.aquion.com.au",
             location: "Sydney",
             date: "June 2025 - Present",
@@ -95,7 +95,7 @@ function App() {
         },
         {
             name: "S1T2 Pty Ltd",
-            description: "- Deliver the frontend of a web-based content management system, ensuring an intuitive user experience and responsive design. <br /> - Developed and maintained backend functionality to support dynamic content and scalability. <br /> - Implemented frontend features and integrated them with backend APIs, improving load times and user engagement.",
+            description: "- <b>Deliver the frontend of a web-based content management system</b>, ensuring an intuitive user experience and responsive design. <br /> - <b>Developed and maintained backend functionality</b> to support dynamic content and scalability. <br /> - Implemented frontend features and integrated them with backend APIs, improving load times and user engagement.",
             link: "https://s1t2.com",
             location: "Sydney",
             date: "May 2023 - Aug 2023",
@@ -146,16 +146,18 @@ function App() {
                     handleMouseLeave('project', index);
                 }}
             >
-                <a
-                    className="text-decoration-none d-block mb-2"
-                    target={link ? "_blank" : undefined}
-                    href={link || undefined}
-                    rel="noreferrer"
-                >
-                    {name}
-                </a>
-                {parse(description)}
-                <div className="tech-stack mt-2 p-2">{tech_stack}</div>
+                <div className="heading">
+                    <a
+                        className="text-decoration-none d-block"
+                        target={link ? "_blank" : undefined}
+                        href={link || undefined}
+                        rel="noreferrer"
+                    >
+                        {name}
+                    </a>
+                </div>
+                <div className="body">{parse(description)}</div>
+                <div className="tech-stack mt-2"><i>Tach Stack: {tech_stack}</i></div>
             </li>
         );
     });
@@ -173,21 +175,21 @@ function App() {
                 }}
             >
                 <a
-                    className="text-decoration-none d-block mb-2"
+                    className="text-decoration-none d-block"
                     target={link ? "_blank" : undefined}
                     href={link || undefined}
                     rel="noreferrer"
                 >
                     {name}
                 </a>
-                <div>{position}</div>
+                <div className="mb-2">{position}</div>
                 <div className="location-date mb-2">
                     <div className="location">{location}</div>
                     <div className="date">{date}</div>
                 </div>
-                {parse(description)}
+                <div className="body">{parse(description)}</div>
 
-                <div className="tech-stack mt-2 p-2">{tech_stack}</div>
+                <div className="tech-stack mt-2"><i>Tech Stack: {tech_stack}</i></div>
             </li>
         )
     })
@@ -960,7 +962,7 @@ function App() {
                 <ul className="flex-display mb-0">{project_items}</ul>
             </div>
 
-            <div className="container-xl about mt-2">
+            <div className="container-sm about mt-2">
                 <div className="container-sm">
                     <div className="row">
                         <div className="col-md-5 description">

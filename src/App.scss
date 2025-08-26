@@ -344,8 +344,17 @@
       border: 2px solid black;
       transition: all 0.4s ease-in-out;
 
-      .tech-stack {
-        border: 1px solid black;
+      .heading {
+        min-height: 3.5rem; /* default */
+        height: auto;     /* ensures it grows naturally */
+      }
+
+      .body, .tech-stack {
+        font-size: 15px;
+      }
+
+      .body {
+        min-height: 145px;
       }
     }
     
@@ -382,7 +391,10 @@
   ul {
     position: relative;
     list-style: none;
-    padding-left: 0;    
+    padding-left: 0; 
+
+    // display: flex;
+    // flex-direction: column;
 
     .experience-item {
       width: 300px;
@@ -391,15 +403,19 @@
       color: black;
       border: 2px solid black;
       transition: all 0.4s ease-in-out;
-    
-      .location-date {
-        display: flex;
-        justify-content: space-between;
+
+      .body, .location-date, .tech-stack {
+        font-size: 15px;
       }
 
-      .tech-stack {
-        border: 1px solid black;
+      .body {
+        min-height: 370px;
       }
+    
+      // .location-date {
+      //   display: flex;
+      //   justify-content: space-between;
+      // }
     }
     
     .experience-item:nth-child(1)  {
