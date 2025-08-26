@@ -687,7 +687,7 @@ function App() {
 
             <div className="container-xl skill">
                 <div className="container-sm">
-                    <h3 className="heading">
+                    <h3 className="heading pt-3">
                         <b>Skills</b>
                     </h3>
                     <div className="row">
@@ -950,21 +950,21 @@ function App() {
                 </div>
             </div>
 
-            <div className="container-sm experience mt-3">
-                <h3 className="heading">Experience</h3>
+            <div className="container-sm experience mt-2">
+                <h3 className="heading pt-3">Experience</h3>
                 <ul className="flex-display">{experience_items}</ul>
             </div>
 
-            <div className="container-sm project mt-3">
-                <h3 className="heading">Projects</h3>
+            <div className="container-sm project mt-2">
+                <h3 className="heading pt-3">Projects</h3>
                 <ul className="flex-display">{project_items}</ul>
             </div>
 
-            <div className="container-xl about mt-3">
+            <div className="container-xl about mt-2">
                 <div className="container-sm">
                     <div className="row">
                         <div className="col-md-5 description">
-                            <h3>About Me</h3>
+                            <h3 className="heading pt-3">About Me</h3>
                             <p>
                                 I am passionate about building software
                                 solutions and exploring emerging technologies.
@@ -984,7 +984,7 @@ function App() {
 
                         <div className="col-md-4 form ">
                             {/* <div className="photo mx-auto"></div> */}
-                            <h3>Hey!</h3>
+                            <h3 className="pt-3">Hey!</h3>
                             <form>
                                 <label htmlFor="name">Name:</label> <br />
                                 <input
@@ -1017,7 +1017,7 @@ function App() {
                         </div>
 
                         <div className="col-md-3 social">
-                            <h3>Social</h3>
+                            <h3 className="pt-3">Social</h3>
                             <ul>
                                 <li>
                                     <a
