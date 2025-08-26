@@ -138,6 +138,21 @@
       &.bootstrap:hover path {
         fill: #5B4282;
       }
+
+      &.php:hover circle {
+        fill: #8892BF;
+      }
+
+      &.mysql:hover path {
+        fill: #00758f;
+      }
+
+      &.aws:hover g {
+        fill: #F90;
+      }
+      // &.aws:hover path {
+      //   fill: #252F3E;
+      // }
     }
 
   }
@@ -325,6 +340,10 @@
       color: black;
       border: 2px solid black;
       transition: all 0.4s ease-in-out;
+
+      .tech-stack {
+        border: 1px solid black;
+      }
     }
     
     .project-item:nth-child(1)  {
@@ -344,6 +363,59 @@
       
     }
 
+  }
+}
+
+.experience {
+  color: white;
+
+  opacity: 0; /* Hide initially */
+  transform: translateY(60px); /* Move down initially */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  
+  .heading {
+    padding-top: 2%;
+  }
+
+  ul {
+    position: relative;
+    list-style: none;
+    padding-left: 0;    
+
+    .experience-item {
+      width: 300px;
+      padding: 3%;
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      transition: all 0.4s ease-in-out;
+    
+      .location-date {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tech-stack {
+        border: 1px solid black;
+      }
+    }
+    
+    .experience-item:nth-child(1)  {
+      z-index: 3; 
+
+    }
+    
+    .experience-item:nth-child(2)  {
+      transform: translateX(-50px);
+      z-index: 2; 
+      
+    }
+
+    .experience-item:nth-child(3)  {
+      transform: translateX(-100px);
+      z-index: 1; 
+      
+    }
   }
 }
 
