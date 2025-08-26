@@ -950,23 +950,17 @@ function App() {
                 </div>
             </div>
 
-            <br />
-
-            <div className="container-sm experience">
+            <div className="container-sm experience mt-3">
                 <h3 className="heading">Experience</h3>
                 <ul className="flex-display">{experience_items}</ul>
             </div>
 
-            <br />
-
-            <div className="container-sm project">
+            <div className="container-sm project mt-3">
                 <h3 className="heading">Projects</h3>
                 <ul className="flex-display">{project_items}</ul>
             </div>
 
-            <br />
-
-            <div className="container-xl about">
+            <div className="container-xl about mt-3">
                 <div className="container-sm">
                     <div className="row">
                         <div className="col-md-5 description">
