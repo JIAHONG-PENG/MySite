@@ -307,6 +307,7 @@
 
   opacity: 0;
   transition: bottom 0.6s ease-in-out, opacity 0.3s ease-in-out,;
+  pointer-events: none;
 }
 
 .move-up {
@@ -362,7 +363,6 @@
     .project-item:nth-child(3)  {
       transform: translateX(-100px);
       z-index: 1; 
-      
     }
 
   }
