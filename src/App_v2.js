@@ -952,12 +952,12 @@ function App() {
 
             <div className="container-sm experience mt-2">
                 <h3 className="heading pt-3">Experience</h3>
-                <ul className="flex-display">{experience_items}</ul>
+                <ul className="flex-display mb-0">{experience_items}</ul>
             </div>
 
             <div className="container-sm project mt-2">
                 <h3 className="heading pt-3">Projects</h3>
-                <ul className="flex-display">{project_items}</ul>
+                <ul className="flex-display mb-0">{project_items}</ul>
             </div>
 
             <div className="container-xl about mt-2">
