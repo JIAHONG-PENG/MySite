@@ -184,13 +184,12 @@ function App() {
                     {name}
                 </a>
                 <div className="mb-2">{position}</div>
-                <div className="location-date mb-2">
+                <div className="location-date mb-4">
                     <div className="location">{location}</div>
                     <div className="date">{date}</div>
                 </div>
                 <div className="body">{parse(description)}</div>
-
-                <div className="tech-stack mt-2"><i>Tech Stack: {tech_stack}</i></div>
+                <div className="tech-stack"><i>Tech Stack: {tech_stack}</i></div>
             </li>
         )
     })

@@ -348,10 +348,10 @@
 
       position: relative;
 
-      // .heading {
-      //   min-height: 3.5rem; /* default */
-      //   height: auto;     /* ensures it grows naturally */
-      // }
+      .heading {
+        min-height: 3.5rem; 
+        height: auto; 
+      }
 
       .body, .tech-stack {
         font-size: 15px;
@@ -562,5 +562,30 @@
   }
   to {
     background-position-y: bottom;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .project, .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    ul {
+      flex-direction: column;
+
+      .project-item {
+        .body {
+          min-height: 110px;
+        }
+      }
+
+      .experience-item {
+        .body {
+          min-height: 320px;
+        }
+      }
+    }
   }
 }
