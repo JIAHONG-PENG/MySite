@@ -139,12 +139,12 @@ function App() {
             <li
                 className="project-item"
                 key={index}
-                onMouseEnter={() => {
-                    handleMouseEnter('project', index);
-                }}
-                onMouseLeave={() => {
-                    handleMouseLeave('project', index);
-                }}
+                // onMouseEnter={() => {
+                //     handleMouseEnter('project', index);
+                // }}
+                // onMouseLeave={() => {
+                //     handleMouseLeave('project', index);
+                // }}
             >
                 <div className="heading">
                     <a
@@ -158,6 +158,7 @@ function App() {
                 </div>
                 <div className="body">{parse(description)}</div>
                 <div className="tech-stack mt-2"><i>Tach Stack: {tech_stack}</i></div>
+                {/* <div className="testbox"></div> */}
             </li>
         );
     });
@@ -167,12 +168,12 @@ function App() {
             <li
                 className="experience-item"
                 key={index}
-                onMouseEnter={() => {
-                    handleMouseEnter('experience', index);
-                }}
-                onMouseLeave={() => {
-                    handleMouseLeave('experience', index);
-                }}
+                // onMouseEnter={() => {
+                //     handleMouseEnter('experience', index);
+                // }}
+                // onMouseLeave={() => {
+                //     handleMouseLeave('experience', index);
+                // }}
             >
                 <a
                     className="text-decoration-none d-block"
