@@ -104,35 +104,35 @@ function App() {
         }
     ];
 
-    function handleMouseEnter(section, index) {
-        var items = [];
-        if (section === 'experience') {
-            items = document.querySelectorAll(".experience-item")
-        } else if (section === 'project') {
-            items = document.querySelectorAll(".project-item")
-        }
+    // function handleMouseEnter(section, index) {
+    //     var items = [];
+    //     if (section === 'experience') {
+    //         items = document.querySelectorAll(".experience-item")
+    //     } else if (section === 'project') {
+    //         items = document.querySelectorAll(".project-item")
+    //     }
 
-        if (index !== 0) {
-            items[
-                index - 1
-            ].style.transform = `translateX(-${index * 50}px)`;
-        }
-    }
+    //     if (index !== 0) {
+    //         items[
+    //             index - 1
+    //         ].style.transform = `translateX(-${index * 50}px)`;
+    //     }
+    // }
 
-    function handleMouseLeave(section, index) {
-        var items = [];
-        if (section === 'experience') {
-            items = document.querySelectorAll(".experience-item")
-        } else if (section === 'project') {
-            items = document.querySelectorAll(".project-item")
-        }
+    // function handleMouseLeave(section, index) {
+    //     var items = [];
+    //     if (section === 'experience') {
+    //         items = document.querySelectorAll(".experience-item")
+    //     } else if (section === 'project') {
+    //         items = document.querySelectorAll(".project-item")
+    //     }
 
-        if (index !== 0) {
-            items[
-                index - 1
-            ].style.transform = `translateX(-${(index - 1) * 50}px)`;
-        }
-    }
+    //     if (index !== 0) {
+    //         items[
+    //             index - 1
+    //         ].style.transform = `translateX(-${(index - 1) * 50}px)`;
+    //     }
+    // }
 
     const project_items = projects.map(({ name, description, link, tech_stack }, index) => {
         return (
